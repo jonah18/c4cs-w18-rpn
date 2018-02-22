@@ -9,7 +9,10 @@ def calculate(arg):
 		except ValueError:
 			arg1 = stack.pop()
 			arg2 = stack.pop()
-			return arg1 + arg2
+			if token == "+":
+				return arg1 + arg2
+			elif token == "^":
+				return arg2**arg1
 
 def main():
 	while True:
