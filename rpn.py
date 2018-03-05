@@ -26,6 +26,8 @@ def calculate(arg):
 				return arg2**arg1
 			elif token == "*":
 				return arg1*arg2
+			elif token == "-":
+				return arg2-arg1
 
 def main():
 	while True:
