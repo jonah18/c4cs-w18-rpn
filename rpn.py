@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+import readline
+import sys
 
 class bcolors:
     PROMPT = '\033[94m'
@@ -27,10 +29,15 @@ def calculate(arg):
 
 def main():
 	while True:
-		val = calculate(input(bcolors.PROMPT + "rpn calc> " + bcolors.INPUT))
-		if val >= 0:
-			print(bcolors.POS + str(val))
-		elif val < 0:
-			print(bcolors.NEG + str(val))
+		try:
+			val = calculate(input(bcolors.PROMPT + "rpn calc> " + bcolors.INPUT))
+			if val >= 0:
+				print(bcolors.POS + str(val))
+			elif val < 0:
+				print(bcolors.NEG + str(val))
+		except KeyboardInterrupt:
+			sys.exit()
+		except:
+			pass
 if __name__ == '__main__':
 	main()
