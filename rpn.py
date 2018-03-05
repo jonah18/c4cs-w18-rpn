@@ -9,7 +9,6 @@ class bcolors:
     NEG = '\033[91m'
     ENDC = '\033[0m'
     BOLD = '\033[1m'
-    UNDERLINE = '\033[4m'
 
 def calculate(arg):
 	stack = list()
