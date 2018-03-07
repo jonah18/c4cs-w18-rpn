@@ -3,8 +3,8 @@ python:
   - "3.5"
 install:
   - pip3 install coveralls
-  - pip3 install python-coveralls
-script: make test
+  - pip3 install coverage
+script: coverage run -m unittest
 notifications:
   email: false
 after_success:
